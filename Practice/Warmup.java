@@ -20,4 +20,10 @@ public class Warmup {
         return xCount;
     }
 
+    boolean doubleX(String str) {
+        int indexOfFirstX = str.indexOf("x");
+        if (indexOfFirstX == -1) return false;
+        if (indexOfFirstX+1 >= str.length()) return false;
+        return str.substring(indexOfFirstX+1, indexOfFirstX+2).equals("x");
+    }
 }
