@@ -6,4 +6,10 @@ public class Warmup {
         }
         return String.valueOf(result);
     }
+
+    public String frontTimes(String str, int n) {
+        String frontStr = str.length() > 3 ? str.substring(0, 3) : str;
+        return stringTimes(frontStr, n);
+    }
+
 }
