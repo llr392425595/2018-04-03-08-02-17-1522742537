@@ -40,4 +40,17 @@ public class WarmupTest {
         assertThat(warmupPractice.frontTimes("", 4),is(""));
         assertThat(warmupPractice.frontTimes("Abc", 0),is(""));
     }
+
+    @Test
+    public void countXX() {
+        assertThat(warmupPractice.countXX("abcxx"),is(1));
+        assertThat(warmupPractice.countXX("xxx"),is(2));
+        assertThat(warmupPractice.countXX("xxxx"),is(3));
+        assertThat(warmupPractice.countXX("abc"),is(0));
+        assertThat(warmupPractice.countXX("Hello there"),is(0));
+        assertThat(warmupPractice.countXX("Hexxo thxxe"),is(2));
+        assertThat(warmupPractice.countXX(""),is(0));
+        assertThat(warmupPractice.countXX("Kittens"),is(0));
+        assertThat(warmupPractice.countXX("Kittensxxx"),is(2));
+    }
 }
