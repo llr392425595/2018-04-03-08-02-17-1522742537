@@ -53,4 +53,19 @@ public class WarmupTest {
         assertThat(warmupPractice.countXX("Kittens"),is(0));
         assertThat(warmupPractice.countXX("Kittensxxx"),is(2));
     }
+
+    @Test
+    public void doubleX() {
+        assertThat(warmupPractice.doubleX("axxbb"),is(true));
+        assertThat(warmupPractice.doubleX("axaxax"),is(false));
+        assertThat(warmupPractice.doubleX("xxxxx"),is(true));
+        assertThat(warmupPractice.doubleX("xaxxx"),is(false));
+        assertThat(warmupPractice.doubleX("aaaax"),is(false));
+        assertThat(warmupPractice.doubleX(""),is(false));
+        assertThat(warmupPractice.doubleX("abc"),is(false));
+        assertThat(warmupPractice.doubleX("x"),is(false));
+        assertThat(warmupPractice.doubleX("xx"),is(true));
+        assertThat(warmupPractice.doubleX("xax"),is(false));
+        assertThat(warmupPractice.doubleX("xaxx"),is(false));
+    }
 }
