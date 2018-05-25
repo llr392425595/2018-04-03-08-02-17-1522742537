@@ -68,4 +68,18 @@ public class WarmupTest {
         assertThat(warmupPractice.doubleX("xax"),is(false));
         assertThat(warmupPractice.doubleX("xaxx"),is(false));
     }
+
+    @Test
+    public void stringBits() {
+        assertThat(warmupPractice.stringBits("Hello"),is("Hlo"));
+        assertThat(warmupPractice.stringBits("Hi"),is("H"));
+        assertThat(warmupPractice.stringBits("Heeololeo"),is("Hello"));
+        assertThat(warmupPractice.stringBits("HiHiHi"),is("HHH"));
+        assertThat(warmupPractice.stringBits(""),is(""));
+        assertThat(warmupPractice.stringBits("Greetings"),is("Getns"));
+        assertThat(warmupPractice.stringBits("Chocoate"),is("Coot"));
+        assertThat(warmupPractice.stringBits("pi"),is("p"));
+        assertThat(warmupPractice.stringBits("Hello Kitten"),is("HloKte"));
+        assertThat(warmupPractice.stringBits("hxaxpxpxy"),is("happy"));
+    }
 }
