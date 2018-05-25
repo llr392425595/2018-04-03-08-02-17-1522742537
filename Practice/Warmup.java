@@ -26,4 +26,12 @@ public class Warmup {
         if (indexOfFirstX+1 >= str.length()) return false;
         return str.substring(indexOfFirstX+1, indexOfFirstX+2).equals("x");
     }
+
+    String stringBits(String str) {
+        StringBuffer result = new StringBuffer();
+        for (int i = 0; i < str.length(); i+=2) {
+            result.append(str.charAt(i));
+        }
+        return String.valueOf(result);
+    }
 }
