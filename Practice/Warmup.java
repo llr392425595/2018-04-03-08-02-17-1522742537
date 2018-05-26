@@ -34,4 +34,12 @@ public class Warmup {
         }
         return String.valueOf(result);
     }
+
+    String stringSplosion(String str) {
+        StringBuffer result = new StringBuffer();
+        for (int i = 0; i < str.length(); i++) {
+            result.append(str.substring(0, i+1));
+        }
+        return String.valueOf(result);
+    }
 }
