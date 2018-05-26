@@ -82,4 +82,18 @@ public class WarmupTest {
         assertThat(warmupPractice.stringBits("Hello Kitten"),is("HloKte"));
         assertThat(warmupPractice.stringBits("hxaxpxpxy"),is("happy"));
     }
+
+    @Test
+    public void stringSplosion() {
+        assertThat(warmupPractice.stringSplosion("Code"),is("CCoCodCode"));
+        assertThat(warmupPractice.stringSplosion("abc"),is("aababc"));
+        assertThat(warmupPractice.stringSplosion("ab"),is("aab"));
+        assertThat(warmupPractice.stringSplosion("x"),is("x"));
+        assertThat(warmupPractice.stringSplosion("fade"),is("ffafadfade"));
+        assertThat(warmupPractice.stringSplosion("There"),is("TThTheTherThere"));
+        assertThat(warmupPractice.stringSplosion("Kitten"),is("KKiKitKittKitteKitten"));
+        assertThat(warmupPractice.stringSplosion("Bye"),is("BByBye"));
+        assertThat(warmupPractice.stringSplosion("Good"),is("GGoGooGood"));
+        assertThat(warmupPractice.stringSplosion("Bad"),is("BBaBad"));
+    }
 }
